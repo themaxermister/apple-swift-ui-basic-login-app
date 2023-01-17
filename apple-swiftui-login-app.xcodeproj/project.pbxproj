@@ -14,6 +14,7 @@
 		930C16B32960103B004C4F65 /* apple_swiftui_login_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C16B22960103B004C4F65 /* apple_swiftui_login_appTests.swift */; };
 		930C16BD2960103B004C4F65 /* apple_swiftui_login_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C16BC2960103B004C4F65 /* apple_swiftui_login_appUITests.swift */; };
 		930C16BF2960103B004C4F65 /* apple_swiftui_login_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930C16BE2960103B004C4F65 /* apple_swiftui_login_appUITestsLaunchTests.swift */; };
+		930C16CE29756B8B004C4F65 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 930C16CD29756B8B004C4F65 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		930C16B82960103B004C4F65 /* apple-swiftui-login-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "apple-swiftui-login-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		930C16BC2960103B004C4F65 /* apple_swiftui_login_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_swiftui_login_appUITests.swift; sourceTree = "<group>"; };
 		930C16BE2960103B004C4F65 /* apple_swiftui_login_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_swiftui_login_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		930C16CB29756A8A004C4F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930C16CE29756B8B004C4F65 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		930C16A02960103A004C4F65 /* apple-swiftui-login-app */ = {
 			isa = PBXGroup;
 			children = (
+				930C16CB29756A8A004C4F65 /* Info.plist */,
 				930C16A12960103A004C4F65 /* apple_swiftui_login_appApp.swift */,
 				930C16A32960103A004C4F65 /* ContentView.swift */,
 				930C16A52960103B004C4F65 /* Assets.xcassets */,
@@ -143,6 +147,9 @@
 			dependencies = (
 			);
 			name = "apple-swiftui-login-app";
+			packageProductDependencies = (
+				930C16CD29756B8B004C4F65 /* FirebaseAuth */,
+			);
 			productName = "apple-swiftui-login-app";
 			productReference = 930C169E2960103A004C4F65 /* apple-swiftui-login-app.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 930C16952960103A004C4F65;
+			packageReferences = (
+				930C16CC29756B8B004C4F65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 930C169F2960103A004C4F65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,6 +430,7 @@
 				DEVELOPMENT_TEAM = 2U3BW2PY7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "apple-swiftui-login-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +460,7 @@
 				DEVELOPMENT_TEAM = 2U3BW2PY7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "apple-swiftui-login-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		930C16CC29756B8B004C4F65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		930C16CD29756B8B004C4F65 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 930C16CC29756B8B004C4F65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 930C16962960103A004C4F65 /* Project object */;
 }
